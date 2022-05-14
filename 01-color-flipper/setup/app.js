@@ -4,12 +4,12 @@ const color = document.querySelector(".color");
 
 btn.addEventListener("click", () => {
   const randomNumber = getRandomNumber();
-  //   console.log(randomNumber);
+  console.log(randomNumber);
   document.body.style.backgroundColor = colors[randomNumber];
   color.textContent = colors[randomNumber];
 });
 
 // Gets a random num between 0 - 3
 let getRandomNumber = () => {
-  return Math.floor(Math.random() * (colors.length - 1) + 1);
+  return Math.floor(Math.random() * colors.length);
 };
