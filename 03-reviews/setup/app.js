@@ -49,26 +49,26 @@ window.addEventListener("DOMContentLoaded", () => {
 
 // Show person based on item
 
-let showPerson = (person) => {
-  const item = reviews[person];
+let showPerson = () => {
+  const item = reviews[currentItem];
   img.src = item.img;
   author.textContent = item.name;
   job.textContent = item.job;
   info.textContent = item.text;
 };
 
-// Show next person
+// Show next person, stop when max length is reached
 nextBtn.addEventListener("click", () => {
   if (currentItem != reviews.length - 1) {
     currentItem++;
   }
-  showPerson(currentItem);
+  showPerson();
 });
 
-// Show previous person
+// Show previous person, if value is 0, then stop
 prevBtn.addEventListener("click", () => {
   if (currentItem) {
     currentItem--;
   }
-  showPerson(currentItem);
+  showPerson();
 });
