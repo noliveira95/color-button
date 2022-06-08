@@ -27,7 +27,7 @@ const deadline = document.querySelector(".deadline");
 const timeElements = document.querySelectorAll(".deadline h4");
 
 // Future date is July 1, 2022 at 6:00 am
-let futureDate = new Date(2022, 6, 1, 6, 0);
+let futureDate = new Date(2022, 6, 1, 6, 00, 0);
 
 const year = futureDate.getFullYear();
 const month = months[futureDate.getMonth()];
@@ -36,4 +36,4 @@ const date = futureDate.getDate();
 const hours = futureDate.getHours();
 const mins = futureDate.getMinutes();
 
-giveaway.textContent = `Giveaway ends ${day}, ${month} ${date}, ${year} at ${hours}:${mins}`;
+giveaway.textContent = `Giveaway ends ${day}, ${month} ${date}, ${year}`;
