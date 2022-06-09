@@ -84,6 +84,7 @@ const getRemainingTime = () => {
     item.innerHTML = format(values[index]);
   });
 
+  // Giveaway ends when time left (countdown) reaches 0
   if (timeLeft < 0) {
     clearInterval(countdown);
     deadline.innerHTML = `Giveaway has ended`.toUpperCase();
